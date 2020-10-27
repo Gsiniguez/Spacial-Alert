@@ -4,7 +4,9 @@ using UnityEngine;
 
 public abstract class Events_Nave : MonoBehaviour
 {
-    public delegate void NaveColisiona();
+    #region  Evento de Colision de nave
+    public delegate void NaveColisiona(string test);
     public static event NaveColisiona OnNaveColisiona;
-    public void _NaveColisiona() => OnNaveColisiona?.Invoke();
+    public void _NaveColisiona(string test) => OnNaveColisiona?.Invoke(test);
+    #endregion
 }

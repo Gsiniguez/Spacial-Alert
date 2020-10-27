@@ -7,9 +7,16 @@ public class Controller_Nave : Events_Nave
 
     [SerializeField]
     float speed;
+    [SerializeField]
+    float rotationSpeed;
 
-    Rigidbody2D rigidbody;
+    private Rigidbody2D rigidbody;
 
+
+    private void Awake()
+    {
+
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -23,17 +30,27 @@ public class Controller_Nave : Events_Nave
         {
             Impulsar();
         }
+
+        Rotar();
+
+    }
+
+    private void FixedUpdate()
+    {
+
     }
 
     void Impulsar()
     {
         float mvm = 1;
         float move = mvm * speed;
-        rigidbody.AddForce(new Vector2(rigidbody.velocity.x, move));
+        rigidbody.velocity = transform.up * move;
     }
 
     void Rotar()
     {
-
+        float mvm = Input.GetAxisRaw("Horizontal");
+        float move = mvm * rotationSpeed;
+        rigidbody.angularVelocity = -move;
     }
 }

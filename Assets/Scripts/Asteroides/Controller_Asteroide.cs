@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Controller_Asteroide : Events_Asteroide
 {
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
