@@ -15,6 +15,8 @@ public class Controller_Nave : Events_Nave
     [SerializeField]
     GameObject[] shotTypes;
 
+    GameObject shotTypeSelected;
+
     private Rigidbody2D rigidbody;
 
 
@@ -26,6 +28,7 @@ public class Controller_Nave : Events_Nave
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        shotTypeSelected = shotTypes[0];
     }
 
     // Update is called once per frame
@@ -66,8 +69,17 @@ public class Controller_Nave : Events_Nave
 
     void Disparar()
     {
-        Instantiate(shotTypes[0], pointOfShot.transform.position, Quaternion.identity);
-        _NaveDispara("Nave Dispara " + shotTypes[0].tag);
+        Instantiate(shotTypeSelected, pointOfShot.transform.position, Quaternion.identity);
+        _NaveDispara("Nave Dispara " + shotTypeSelected.tag);
+    }
+
+    public void AsignarTipoDisparo(int tipo)
+    {
+        /*
+        0 -> Disparo Normal
+        */
+
+        shotTypeSelected = shotTypes[tipo];
     }
 
     private void OnCollisionEnter(Collision other)
