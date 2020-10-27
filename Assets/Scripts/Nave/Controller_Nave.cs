@@ -15,6 +15,10 @@ public class Controller_Nave : Events_Nave
     [SerializeField]
     GameObject[] shotTypes;
 
+    [SerializeField]
+    float attackRate;
+    float attackTimer = 0f;
+
     GameObject shotTypeSelected;
 
     private Rigidbody2D rigidbody;
@@ -41,9 +45,15 @@ public class Controller_Nave : Events_Nave
 
         Rotar();
 
+        //Tiempo entre ataques
+        attackTimer += Time.deltaTime;
         if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Mouse0))
         {
-            Disparar();
+            if (attackTimer >= attackRate)
+            {
+                Disparar();
+                attackTimer = 0f;
+            }
         }
 
     }

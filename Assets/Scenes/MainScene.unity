@@ -786,6 +786,12 @@ PrefabInstance:
       propertyPath: rotationSpeed
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 4326555350013026636, guid: 7e60ece1695fdfd4d9b0d8d4fbd88532,
+        type: 3}
+      propertyPath: shotTypes.Array.data[0]
+      value: 
+      objectReference: {fileID: 3261681524061493664, guid: f9ee28af33faca54c869ca9fb885c301,
+        type: 3}
     - target: {fileID: 4326555350013026637, guid: 7e60ece1695fdfd4d9b0d8d4fbd88532,
         type: 3}
       propertyPath: m_Name
