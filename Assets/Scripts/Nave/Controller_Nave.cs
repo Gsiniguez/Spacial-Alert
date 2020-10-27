@@ -10,6 +10,11 @@ public class Controller_Nave : Events_Nave
     [SerializeField]
     float rotationSpeed;
 
+    [SerializeField]
+    GameObject pointOfShot;
+    [SerializeField]
+    GameObject[] shotTypes;
+
     private Rigidbody2D rigidbody;
 
 
@@ -33,6 +38,11 @@ public class Controller_Nave : Events_Nave
 
         Rotar();
 
+        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Mouse0))
+        {
+            Disparar();
+        }
+
     }
 
     private void FixedUpdate()
@@ -52,5 +62,11 @@ public class Controller_Nave : Events_Nave
         float mvm = Input.GetAxisRaw("Horizontal");
         float move = mvm * rotationSpeed;
         rigidbody.angularVelocity = -move;
+    }
+
+    void Disparar()
+    {
+        Instantiate(shotTypes[0], pointOfShot.transform.position, Quaternion.identity);
+        _NaveDispara("Nave Dispara " + shotTypes[0].tag);
     }
 }
