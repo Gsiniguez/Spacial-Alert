@@ -69,4 +69,12 @@ public class Controller_Nave : Events_Nave
         Instantiate(shotTypes[0], pointOfShot.transform.position, Quaternion.identity);
         _NaveDispara("Nave Dispara " + shotTypes[0].tag);
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Asteroide")
+        {
+            _NaveColisiona("Nave Colisiono");
+        }
+    }
 }
