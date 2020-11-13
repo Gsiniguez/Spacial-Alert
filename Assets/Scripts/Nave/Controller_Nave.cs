@@ -79,7 +79,7 @@ public class Controller_Nave : Events_Nave
 
     void Disparar()
     {
-        Instantiate(shotTypeSelected, pointOfShot.transform.position, Quaternion.identity);
+        Instantiate(shotTypeSelected, pointOfShot.transform.position, pointOfShot.transform.rotation);
         _NaveDispara("Nave Dispara " + shotTypeSelected.tag);
     }
 

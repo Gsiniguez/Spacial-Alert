@@ -504,12 +504,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1194778421 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1194778421, guid: 7e60ece1695fdfd4d9b0d8d4fbd88532,
-    type: 3}
-  m_PrefabInstance: {fileID: 4326555349754797131}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2027601780
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,27 +765,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4326555350013026636, guid: 7e60ece1695fdfd4d9b0d8d4fbd88532,
-        type: 3}
-      propertyPath: shotTypes.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4326555350013026636, guid: 7e60ece1695fdfd4d9b0d8d4fbd88532,
-        type: 3}
-      propertyPath: pointOfShot
-      value: 
-      objectReference: {fileID: 1194778421}
-    - target: {fileID: 4326555350013026636, guid: 7e60ece1695fdfd4d9b0d8d4fbd88532,
-        type: 3}
-      propertyPath: rotationSpeed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4326555350013026636, guid: 7e60ece1695fdfd4d9b0d8d4fbd88532,
-        type: 3}
-      propertyPath: shotTypes.Array.data[0]
-      value: 
-      objectReference: {fileID: 3261681524061493664, guid: f9ee28af33faca54c869ca9fb885c301,
-        type: 3}
     - target: {fileID: 4326555350013026637, guid: 7e60ece1695fdfd4d9b0d8d4fbd88532,
         type: 3}
       propertyPath: m_Name
