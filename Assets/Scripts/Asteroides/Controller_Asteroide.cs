@@ -20,17 +20,20 @@ public class Controller_Asteroide : Events_Asteroide
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnEnable()
     {
-        Debug.Log(other.gameObject.tag);
-        if (other.gameObject.tag == "Disparo")
+        Events_Disparo.OnDisparoInpacta += DisparoImpacto;
+    }
+    private void OnDisable()
+    {
+        Events_Disparo.OnDisparoInpacta -= DisparoImpacto;
+    }
+
+    void DisparoImpacto(GameObject asteroide, float danio)
+    {
+        if (asteroide == gameObject)
         {
-            //Obtener Danio
-            float danio = other.GetComponent<Controller_Disparo>().ObtenerDanio();
-
             PerderVida(danio);
-
-            Destroy(other.gameObject);
         }
     }
 
@@ -38,7 +41,6 @@ public class Controller_Asteroide : Events_Asteroide
     void PerderVida(float danio)
     {
         vida -= danio;
-
 
         if (vida <= 0)
         {

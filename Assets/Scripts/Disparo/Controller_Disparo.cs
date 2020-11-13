@@ -44,7 +44,16 @@ public class Controller_Disparo : Events_Disparo
         }
     }
 
-    public float ObtenerDanio(){
-        return danio;
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log(other.gameObject.tag);
+        if (other.gameObject.tag == "Asteroide")
+        {
+            //Emitir Evento
+            _DisparoInpacta(other.gameObject, danio);
+
+            //Destruir disparo
+            Destroy(gameObject);
+        }
     }
 }
