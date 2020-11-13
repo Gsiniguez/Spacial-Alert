@@ -12,6 +12,9 @@ public class Controller_Disparo : Events_Disparo
     float lifeTime;
     float lifeTimer;
 
+    [SerializeField]
+    float danio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,5 +42,9 @@ public class Controller_Disparo : Events_Disparo
         {
             Destroy(gameObject);
         }
+    }
+
+    public float ObtenerDanio(){
+        return danio;
     }
 }
