@@ -16,4 +16,14 @@ public class Controller_Asteroide : Events_Asteroide
     {
         
     }
+
+    void explotar(){
+        _AsteroideExplota()
+    }
+
+    
+    void impactar(){
+        _AsteroideImpactar()       
+    }
+
 }
