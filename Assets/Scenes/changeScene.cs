@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controller_Asteroide : Events_Asteroide
+public class changeScene : MonoBehaviour
 {
-
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -17,13 +16,8 @@ public class Controller_Asteroide : Events_Asteroide
         
     }
 
-    void explotar(){
-        _AsteroideExplota();
+    public static void StartGame()
+    {
+        Debug.Log("start game");
     }
-
-    
-    void impactar(){
-        _AsteroideImpactar();      
-    }
-
 }
