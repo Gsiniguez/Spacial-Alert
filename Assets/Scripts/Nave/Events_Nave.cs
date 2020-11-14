@@ -10,9 +10,9 @@ public abstract class Events_Nave : MonoBehaviour
     public void _NaveColisiona(string test) => OnNaveColisiona?.Invoke(test);
     #endregion
 
-    #region  Evento de Disparo de nave
-    public delegate void NaveDispara(string test);
-    public static event NaveDispara OnNaveDispara;
-    public void _NaveDispara(string test) => OnNaveDispara?.Invoke(test);
+    #region  Evento de Nave Explota
+    public delegate void NaveExplota();
+    public static event NaveExplota OnNaveExplota;
+    public void _NaveExplota() => OnNaveExplota?.Invoke();
     #endregion
 }

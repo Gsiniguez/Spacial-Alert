@@ -74,7 +74,14 @@ public class Controller_Nave : Events_Nave
     void PerderVida(){
         vida -= 1;
 
-        
+        if(vida <= 0){
+            Explotar();
+        }
+    }
+
+    void Explotar(){
+        _NaveExplota();
+        Destroy(gameObject);
     }
 
     void Impulsar()
@@ -94,7 +101,6 @@ public class Controller_Nave : Events_Nave
     void Disparar()
     {
         Instantiate(shotTypeSelected, pointOfShot.transform.position, pointOfShot.transform.rotation);
-        _NaveDispara("Nave Dispara " + shotTypeSelected.tag);
     }
 
     public void AsignarTipoDisparo(int tipo)
