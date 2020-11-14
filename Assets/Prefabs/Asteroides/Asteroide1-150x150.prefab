@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6836522648324952117}
   m_Layer: 0
   m_Name: Asteroide1-150x150
-  m_TagString: Asteroide
+  m_TagString: Asteroide_Grande
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

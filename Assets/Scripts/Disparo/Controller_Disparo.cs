@@ -47,7 +47,7 @@ public class Controller_Disparo : Events_Disparo
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.gameObject.tag);
-        if (other.gameObject.tag == "Asteroide")
+        if (other.gameObject.tag == "Asteroide_Chico" || other.gameObject.tag == "Asteroide_Mediano" || other.gameObject.tag == "Asteroide_Grande")
         {
             //Emitir Evento
             _DisparoInpacta(other.gameObject, danio);

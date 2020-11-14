@@ -522,7 +522,7 @@ GameObject:
   - component: {fileID: 1111960018}
   m_Layer: 5
   m_Name: Container
-  m_TagString: Untagged
+  m_TagString: Asteroide_Chico
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -727,6 +727,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Asteroide1-50x50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971493835290711141, guid: 340851888487ce843996b5a75b01387e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Asteroide_Chico
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 340851888487ce843996b5a75b01387e, type: 3}

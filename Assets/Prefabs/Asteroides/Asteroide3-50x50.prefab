@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3154839219958614261}
   m_Layer: 0
   m_Name: Asteroide3-50x50
-  m_TagString: Asteroide
+  m_TagString: Asteroide_Chico
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
