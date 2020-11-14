@@ -9,7 +9,8 @@ public class Controller_Nave : Events_Nave
     float speed;
     [SerializeField]
     float rotationSpeed;
-
+    [SerializeField]
+    int vida;
     [SerializeField]
     GameObject pointOfShot;
     [SerializeField]
@@ -58,9 +59,22 @@ public class Controller_Nave : Events_Nave
 
     }
 
-    private void FixedUpdate()
-    {
+    private void OnEnable() {
+        Events_Asteroide.onAsteroideImpactar += ImapctoConAsteroide;
+    }
 
+    private void OnDisable() {
+        Events_Asteroide.onAsteroideImpactar -= ImapctoConAsteroide;
+    }
+
+    void ImapctoConAsteroide(){
+        PerderVida();
+    }
+
+    void PerderVida(){
+        vida -= 1;
+
+        
     }
 
     void Impulsar()

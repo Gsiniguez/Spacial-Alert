@@ -29,6 +29,7 @@ public class Controller_Asteroide : Events_Asteroide
         Events_Disparo.OnDisparoInpacta -= DisparoImpacto;
     }
 
+    //Listener de Evento OnDisparoInpacta
     void DisparoImpacto(GameObject asteroide, float danio)
     {
         if (asteroide == gameObject)
@@ -44,17 +45,22 @@ public class Controller_Asteroide : Events_Asteroide
 
         if (vida <= 0)
         {
+            Explotar();
             Destroy(gameObject);
         }
     }
 
-    void explotar(){
-        _AsteroideExplota();
+    void Explotar(){
+        //Emite evento de Explocion
+        _AsteroideExplota(gameObject);
     }
 
     
-    void impactar(){
-        _AsteroideImpactar();  
+    void Impactar(){
+        //Emitir evento de impactar con nave
+        _AsteroideImpactar();
+        //Se destruye una vez que impacto con nave
+        Destroy(gameObject);
     }
 
 }
