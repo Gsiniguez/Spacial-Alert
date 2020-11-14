@@ -50,13 +50,22 @@ public class Controller_Asteroide : Events_Asteroide
         }
     }
 
-    void Explotar(){
+    void Explotar()
+    {
         //Emite evento de Explocion
         _AsteroideExplota(gameObject);
     }
 
-    
-    void Impactar(){
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Impactar();
+        }
+    }
+
+    void Impactar()
+    {
         //Emitir evento de impactar con nave
         _AsteroideImpactar();
         //Se destruye una vez que impacto con nave

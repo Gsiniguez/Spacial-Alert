@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7971856645937459150}
   - component: {fileID: 1438013914824837222}
+  - component: {fileID: -4211043565924780069}
+  - component: {fileID: 1941312985515153853}
   m_Layer: 0
   m_Name: Asteroide2-100x100
   m_TagString: Asteroide_Mediano
@@ -67,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -413920315
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: afb3a154b71e61641b9a465ef0d499fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -81,3 +83,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &-4211043565924780069
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8425097629833581923}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 1.5}
+    newSize: {x: 1.5, y: 1.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.55, y: -0.51}
+      - {x: 0.72999996, y: -0.22999999}
+      - {x: 0.72999996, y: -0.13}
+      - {x: 0.69, y: 0.02}
+      - {x: 0.69, y: 0.16}
+      - {x: 0.59, y: 0.35999998}
+      - {x: 0.58, y: 0.47}
+      - {x: 0.48999998, y: 0.55}
+      - {x: 0.32999998, y: 0.64}
+      - {x: -0.07, y: 0.69}
+      - {x: -0.17999999, y: 0.7}
+      - {x: -0.28, y: 0.7}
+      - {x: -0.31, y: 0.68}
+      - {x: -0.51, y: 0.32999998}
+      - {x: -0.62, y: 0.21}
+      - {x: -0.7, y: -0.099999994}
+      - {x: -0.7, y: -0.21}
+      - {x: -0.65, y: -0.35999998}
+      - {x: -0.58, y: -0.52}
+      - {x: -0.53999996, y: -0.59999996}
+      - {x: -0.32999998, y: -0.59999996}
+      - {x: -0.14999999, y: -0.69}
+      - {x: -0.01, y: -0.69}
+      - {x: 0.29, y: -0.63}
+      - {x: 0.37, y: -0.65999997}
+      - {x: 0.44, y: -0.65999997}
+--- !u!50 &1941312985515153853
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8425097629833581923}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

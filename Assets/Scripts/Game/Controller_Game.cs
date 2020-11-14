@@ -10,7 +10,12 @@ public class Controller_Game : Events_Game
     float puntos;
 
     [SerializeField]
+    int vida;
+
+    [SerializeField]
     Text puntuacion;
+    [SerializeField]
+    Text vidaText;
 
     // Start is called before the first frame update
     void Start()
@@ -23,17 +28,25 @@ public class Controller_Game : Events_Game
     {
         PuntosPorMilisegundo();
 
-        puntuacion.text = "PUNTOS: "+puntos.ToString();
+        puntuacion.text = "PUNTOS: " + puntos.ToString();
+        vidaText.text = "VIDAS: " + vida.ToString();
     }
 
     private void OnEnable()
     {
         Events_Asteroide.OnAsteroideExplota += SumarPunto;
+        Events_Nave.OnNavePierdeVida += RestarVida;
     }
 
     private void OnDisable()
     {
         Events_Asteroide.OnAsteroideExplota -= SumarPunto;
+        Events_Nave.OnNavePierdeVida += RestarVida;
+    }
+
+    void RestarVida()
+    {
+        vida -= 1;
     }
 
     void SumarPunto(GameObject asteroide)

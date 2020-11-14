@@ -10,8 +10,6 @@ public class Controller_Nave : Events_Nave
     [SerializeField]
     float rotationSpeed;
     [SerializeField]
-    int vida;
-    [SerializeField]
     GameObject pointOfShot;
     [SerializeField]
     GameObject[] shotTypes;
@@ -59,27 +57,28 @@ public class Controller_Nave : Events_Nave
 
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         Events_Asteroide.onAsteroideImpactar += ImapctoConAsteroide;
     }
 
-    private void OnDisable() {
+    private void OnDisable()
+    {
         Events_Asteroide.onAsteroideImpactar -= ImapctoConAsteroide;
     }
 
-    void ImapctoConAsteroide(){
+    void ImapctoConAsteroide()
+    {
         PerderVida();
     }
 
-    void PerderVida(){
-        vida -= 1;
-
-        if(vida <= 0){
-            Explotar();
-        }
+    void PerderVida()
+    {
+        _NavePierdeVida();
     }
 
-    void Explotar(){
+    void Explotar()
+    {
         _NaveExplota();
         Destroy(gameObject);
     }
@@ -112,11 +111,4 @@ public class Controller_Nave : Events_Nave
         shotTypeSelected = shotTypes[tipo];
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Asteroide")
-        {
-            _NaveColisiona("Nave Colisiono");
-        }
-    }
 }
