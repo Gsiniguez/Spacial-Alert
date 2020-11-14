@@ -47,6 +47,10 @@ public class Controller_Game : Events_Game
     void RestarVida()
     {
         vida -= 1;
+
+        if(vida <= 0){
+            _NaveExplota();
+        }
     }
 
     void SumarPunto(GameObject asteroide)

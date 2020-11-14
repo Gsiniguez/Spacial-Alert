@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7009ad54a037e3440a635b63866194da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 0
+  vida: 100
 --- !u!60 &4517305130617972882
 PolygonCollider2D:
   m_ObjectHideFlags: 0

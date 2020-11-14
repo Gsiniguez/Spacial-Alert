@@ -60,11 +60,14 @@ public class Controller_Nave : Events_Nave
     private void OnEnable()
     {
         Events_Asteroide.onAsteroideImpactar += ImapctoConAsteroide;
+        Events_Game.OnNaveExplota += Explotar;
     }
 
     private void OnDisable()
     {
         Events_Asteroide.onAsteroideImpactar -= ImapctoConAsteroide;
+        Events_Game.OnNaveExplota -= Explotar;
+
     }
 
     void ImapctoConAsteroide()
@@ -79,8 +82,7 @@ public class Controller_Nave : Events_Nave
 
     void Explotar()
     {
-        _NaveExplota();
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     void Impulsar()

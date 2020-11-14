@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4739145244046501421}
   - component: {fileID: -5429269628652579151}
   - component: {fileID: 9216389476506147794}
+  - component: {fileID: 4583187766653813674}
   m_Layer: 0
   m_Name: Asteroide1-100x100
   m_TagString: Asteroide_Mediano
@@ -151,3 +152,16 @@ PolygonCollider2D:
       - {x: 0.089999996, y: -0.51}
       - {x: 0.35, y: -0.42}
       - {x: 0.45999998, y: -0.34}
+--- !u!114 &4583187766653813674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6777964516901858387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7009ad54a037e3440a635b63866194da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 200

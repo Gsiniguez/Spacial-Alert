@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1659823444438952419}
   - component: {fileID: -6012432403426338332}
   - component: {fileID: -3217292122195712368}
+  - component: {fileID: -6059790814968001968}
   m_Layer: 0
   m_Name: Asteroide2-150x150
   m_TagString: Asteroide_Grande
@@ -155,3 +156,16 @@ PolygonCollider2D:
       - {x: 0.29, y: -0.63}
       - {x: 0.37, y: -0.65999997}
       - {x: 0.44, y: -0.65999997}
+--- !u!114 &-6059790814968001968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077152062944933094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7009ad54a037e3440a635b63866194da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 500
