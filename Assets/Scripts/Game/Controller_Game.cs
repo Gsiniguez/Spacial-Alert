@@ -17,6 +17,8 @@ public class Controller_Game : Events_Game
     [SerializeField]
     Text vidaText;
 
+    bool sumarPuntos = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,8 @@ public class Controller_Game : Events_Game
     // Update is called once per frame
     void Update()
     {
-        PuntosPorMilisegundo();
+        if (sumarPuntos)
+            PuntosPorMilisegundo();
 
         puntuacion.text = "PUNTOS: " + puntos.ToString();
         vidaText.text = "VIDAS: " + vida.ToString();
@@ -48,8 +51,10 @@ public class Controller_Game : Events_Game
     {
         vida -= 1;
 
-        if(vida <= 0){
+        if (vida <= 0)
+        {
             _NaveExplota();
+            sumarPuntos = false;
         }
     }
 
