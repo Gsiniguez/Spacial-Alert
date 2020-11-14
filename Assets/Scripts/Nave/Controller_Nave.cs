@@ -9,7 +9,6 @@ public class Controller_Nave : Events_Nave
     float speed;
     [SerializeField]
     float rotationSpeed;
-
     [SerializeField]
     GameObject pointOfShot;
     [SerializeField]
@@ -58,9 +57,32 @@ public class Controller_Nave : Events_Nave
 
     }
 
-    private void FixedUpdate()
+    private void OnEnable()
     {
+        Events_Asteroide.onAsteroideImpactar += ImapctoConAsteroide;
+        Events_Game.OnNaveExplota += Explotar;
+    }
 
+    private void OnDisable()
+    {
+        Events_Asteroide.onAsteroideImpactar -= ImapctoConAsteroide;
+        Events_Game.OnNaveExplota -= Explotar;
+
+    }
+
+    void ImapctoConAsteroide()
+    {
+        PerderVida();
+    }
+
+    void PerderVida()
+    {
+        _NavePierdeVida();
+    }
+
+    void Explotar()
+    {
+        gameObject.SetActive(false);
     }
 
     void Impulsar()
@@ -79,8 +101,7 @@ public class Controller_Nave : Events_Nave
 
     void Disparar()
     {
-        Instantiate(shotTypeSelected, pointOfShot.transform.position, Quaternion.identity);
-        _NaveDispara("Nave Dispara " + shotTypeSelected.tag);
+        Instantiate(shotTypeSelected, pointOfShot.transform.position, pointOfShot.transform.rotation);
     }
 
     public void AsignarTipoDisparo(int tipo)
@@ -92,11 +113,4 @@ public class Controller_Nave : Events_Nave
         shotTypeSelected = shotTypes[tipo];
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Asteroide")
-        {
-            _NaveColisiona("Nave Colisiono");
-        }
-    }
 }
